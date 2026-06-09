@@ -1,4 +1,20 @@
-/.vscode
-/go-vue-postgresql-project-standard.md
-/project_rule.md
-/tasks
+# frontend
+frontend/node_modules/
+frontend/dist/
+
+# backend build outputs
+backend/*.exe
+backend/server
+backend/bin/
+backend/tmp/
+
+# uploads/runtime data
+backend/uploads/
+*.xlsx
+~$*.xlsx
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
