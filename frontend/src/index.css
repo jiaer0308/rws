@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --background: #faf8ff;
+  --surface: #faf8ff;
+  --surface-subtle: #fafbfb;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f4f3f9;
+  --surface-container: #eeedf4;
+  --surface-container-high: #e9e7ee;
+  --surface-container-highest: #e3e2e8;
+  --surface-variant: #e3e2e8;
+  --outline: #747684;
+  --outline-variant: #c4c6d4;
+  --primary: #00246a;
+  --primary-container: #003799;
+  --secondary: #255fa1;
+  --secondary-fixed: #d4e3ff;
+  --on-secondary-fixed: #001c3a;
+  --text-primary: #1a1b20;
+  --text-secondary: #434652;
+  --text-muted: #747684;
+  --on-primary: #ffffff;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --error-container: #ffdad6;
+  --info: #3d73b6;
+
+  --bg-main: var(--surface-subtle);
+  --bg-card: var(--surface-container-lowest);
+  --bg-card-border: rgba(6, 7, 11, 0.1);
+  --accent-primary: var(--primary);
+  --accent-hover: var(--primary-container);
+  --accent-gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
+
+  --shadow-sm: 0 1px 3px rgba(6, 7, 11, 0.06);
+  --shadow-md: 0 4px 20px rgba(6, 7, 11, 0.04);
+  --shadow-lg: 0 10px 30px rgba(6, 7, 11, 0.08);
+
+  --radius-sm: 8px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --sidebar-width: 260px;
+
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.glass-panel {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: var(--primary-container);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Micro-animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
